@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/Main.hs",
+      "use": "@vercel/haskell"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/Main.hs"
+    }
+  ],
+  "env": {
+    "HASKELL_ENV": "production"
+  }
+}
